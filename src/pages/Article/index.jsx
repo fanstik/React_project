@@ -4,10 +4,10 @@ import locale from 'antd/es/date-picker/locale/zh_CN'
 // 导入资源
 import { Table, Tag, Space } from 'antd'
 import { EditOutlined, DeleteOutlined } from '@ant-design/icons'
-import img404 from '../../assets/error.png'
-import { useChannel } from '../../hooks/useChannel'
+import img404 from '@/assets/error.png'
+import { useChannel } from '@/hooks/useChannel'
 import { useEffect, useState } from 'react'
-import { getArticleListAPI,deleteArticleAPI } from '../../apis/article'
+import { getArticleListAPI,deleteArticleAPI } from '@/apis/article'
 
 const { Option } = Select
 const { RangePicker } = DatePicker

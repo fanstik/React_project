@@ -1,4 +1,4 @@
-import { request } from "../utils";
+import { request } from "@/utils";
 
 //频道数据获取接口
 const getChannelAPI = () => {

@@ -1,7 +1,7 @@
 //git@git.zhlh6.cn:fanstik/React_project.git
 import { createSlice } from "@reduxjs/toolkit";
-import { setToken as localSetToken,getToken,removeToken } from "../../utils/index";
-import { loginAPI,getProfileAPI } from "../../apis/user";
+import { setToken as localSetToken,getToken,removeToken } from "@/utils/index";
+import { loginAPI,getProfileAPI } from "@/apis/user";
 
 const userStore = createSlice({
     name:"user",
@@ -31,6 +31,7 @@ const userStore = createSlice({
 //异步登录方法，发送请求获取token
 const fetchLogin = (loginForm) => {
     return async (dispatch) => {
+        console.log(loginForm);
         const res = await loginAPI(loginForm);
         dispatch(setToken(res.data.token || res.data.data.token));
     }

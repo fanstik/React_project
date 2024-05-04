@@ -1,6 +1,6 @@
 import axios from "axios";
 import { getToken, removeToken } from "./token";
-import router from "../router/index"
+import router from "@/router/index"
 
 const request = axios.create({
     baseURL:'http://geek.itheima.net/v1_0',
