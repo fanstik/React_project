@@ -15,7 +15,7 @@ const Login = () => {
       //请求token并存入redux
       await dispatch(fetchLogin(values));
       //路由跳转到layout界面
-      navigate('/');
+      navigate('/home');
       //显示登录成功
       message.success("登录成功")
     }
