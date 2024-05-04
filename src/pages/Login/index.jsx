@@ -1,9 +1,9 @@
 import React from 'react'
 //引入css文件和静态资源
 import "./index.scss"
-import logo from "../../assets/logo.png"
+import logo from "@/assets/logo.png"
 import {Card,Form,Input,Button, message} from 'antd'
-import { fetchLogin } from '../../store/modules/user'
+import { fetchLogin } from '@/store/modules/user'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
@@ -11,6 +11,7 @@ const Login = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const handleOnFinish = async (values) => {
+      console.log(values);
       //请求token并存入redux
       await dispatch(fetchLogin(values));
       //路由跳转到layout界面

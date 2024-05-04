@@ -1,14 +1,14 @@
-import { request } from "../utils";
+import { request } from "@/utils";
 
-const loginAPI = (loginForm) => {
-    request({
+function loginAPI(loginForm) {
+    return request({
         url:'/authorizations',
         method:'POST',
-        params:loginForm
+        data:loginForm
     })
 }
 
-const getProfileAPI = () => {
+function getProfileAPI() {
     return request({
         url:'/user/profile',
         method:'GET',

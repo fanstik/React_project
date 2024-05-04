@@ -18,11 +18,11 @@ import {
     getArticleByIdAPI,
     postArticleAPI,
     putArticleAPI
- } from '../../apis/article'
+ } from '@/apis/article'
   import './index.scss'
 import {  useEffect, useRef, useState } from 'react'
-import { useChannel } from '../../hooks/useChannel'
-import { request } from '../../utils'
+import { useChannel } from '@/hooks/useChannel'
+
   
   const { Option } = Select
   
@@ -94,7 +94,6 @@ import { request } from '../../utils'
       //通过id获取数据
       async function getArticleDetail () {
         const res = await getArticleByIdAPI(id);
-        console.log(res);
         const { cover, ...formValue } = res.data;
         //调用实例方法，完成数据回填
         form.setFieldsValue({...formValue,type:cover.type});
